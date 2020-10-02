@@ -37,6 +37,8 @@ function Calculator() {
                         result = parseFloat(userValue1) * parseFloat(userValue);
                         setUserValue('' + result);
                         break;
+                    default:
+                        break;
                 }
         }
     }
