@@ -18,28 +18,27 @@ function Calculator() {
     }
     function handleOperator(op) {
         let result = 0;
-        switch (op) {
-            case '=':
-                switch (operator) {
-                    case '+':
-                        result = parseFloat(userValue1) + parseFloat(userValue);
-                        setUserValue('' + result);
-                        break;
-                    case '-':
-                        result = parseFloat(userValue1) - parseFloat(userValue);
-                        setUserValue('' + result);
-                        break;
-                    case '/':
-                        result = parseFloat(userValue1) / parseFloat(userValue);
-                        setUserValue('' + result);
-                        break;
-                    case '*':
-                        result = parseFloat(userValue1) * parseFloat(userValue);
-                        setUserValue('' + result);
-                        break;
-                    default:
-                        break;
-                }
+        if (op === '=') {
+            switch (operator) {
+                case '+':
+                    result = parseFloat(userValue1) + parseFloat(userValue);
+                    setUserValue('' + result);
+                    break;
+                case '-':
+                    result = parseFloat(userValue1) - parseFloat(userValue);
+                    setUserValue('' + result);
+                    break;
+                case '/':
+                    result = parseFloat(userValue1) / parseFloat(userValue);
+                    setUserValue('' + result);
+                    break;
+                case '*':
+                    result = parseFloat(userValue1) * parseFloat(userValue);
+                    setUserValue('' + result);
+                    break;
+                default:
+                    break;
+            }
         }
     }
     return (
